@@ -54,11 +54,11 @@ int main()
     double S, K, r, T, sigma;
     
     std::cout << "PARAMETERS" <<std::endl;
-    std::cout << "Stock price (S): "; std::cin >> S;
-    std::cout << "Strike price (K): "; std::cin >> K;
-    std::cout << "Risk-free interest rate (r): "; std::cin >> r;
-    std::cout << "Time to expiration (T in years): "; std::cin >> T;
-    std::cout << "Volatility (sigma): "; std::cin >> sigma;
+    std::cout << "Stock price: "; std::cin >> S;
+    std::cout << "Strike price: "; std::cin >> K;
+    std::cout << "Risk-free interest rate: "; std::cin >> r;
+    std::cout << "Time to expiration: "; std::cin >> T;
+    std::cout << "Volatility: "; std::cin >> sigma;
 
     double call_price = BS_call(S, K, r, T, sigma);
     double put_price = BS_put(S, K, r, T, sigma);
