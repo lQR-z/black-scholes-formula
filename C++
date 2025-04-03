@@ -52,7 +52,8 @@ double BS_put(double S, double K, double r, double T, double sigma)
 int main() 
 {
     double S, K, r, T, sigma;
-
+    
+    std::cout << "PARAMETERS" <<std::endl;
     std::cout << "Stock price (S): "; std::cin >> S;
     std::cout << "Strike price (K): "; std::cin >> K;
     std::cout << "Risk-free interest rate (r): "; std::cin >> r;
@@ -62,8 +63,9 @@ int main()
     double call_price = BS_call(S, K, r, T, sigma);
     double put_price = BS_put(S, K, r, T, sigma);
     
-    std::cout << "Black-Scholes Call Price: " << call_price << std::endl;
-    std::cout << "Black-Scholes Put Price: " << put_price << std::endl;
+    std::cout << "\nBLACK-SCHOLES" <<std::endl;
+    std::cout << "Call Price: " << call_price << std::endl;
+    std::cout << "Put Price: " << put_price << std::endl;
 
     return 0;
 }
