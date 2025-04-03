@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-// Numerical approximation to normal distribution (0,1)
+// Numerical approximation to normal distribution: x ~ N(0,1)
 // Handbook of Mathemathical functions (Abramowitz and Stegun)
 
 double N(double x) 
