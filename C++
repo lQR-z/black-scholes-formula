@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-// Numerical approximation to normal distribution: x ~ N(0,1)
+// Numerical approximation to cumulative standard normal distribution
 // Handbook of Mathemathical functions (Abramowitz and Stegun)
 
 double N(double x) 
@@ -14,7 +14,7 @@ double N(double x)
     static double p  =  0.2316419;
     static double c2 =  0.3989423;
 
-// Approaching zero probability (P= 0.000000002)
+// Approaching zero probability (P(x)= 0.000000001)
 
     if (x >  6.0) { return 1.0; };
     if (x < -6.0) { return 0.0; };
@@ -63,7 +63,7 @@ int main()
     double call_price = BS_call(S, K, r, T, sigma);
     double put_price = BS_put(S, K, r, T, sigma);
     
-    std::cout << "\nBLACK-SCHOLES" <<std::endl;
+    std::cout << "\nBLACK-SCHOLES" << std::endl;
     std::cout << "Call Price: " << call_price << std::endl;
     std::cout << "Put Price: " << put_price << std::endl;
 
